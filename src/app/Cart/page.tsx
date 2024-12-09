@@ -4,6 +4,22 @@ import Image from 'next/image';
 const Cart = () => {
   return (
     <>
+  <div className=" relative w-full h-[350px]">
+        <Image
+          src="/Rectangle 1.png"
+          alt="insta"
+          layout="fill"
+          objectFit="cover"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black p-10 ">
+          <h1 className="text-3xl md:text-5xl font-bold">Cart</h1>
+          <p className="opacity-[0.8] max-w-xl text-lg md:text-xl mt-2 font-semibold">
+            Home - Cart
+          </p>
+        </div>
+      </div>
+
       <div className=" py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-4">

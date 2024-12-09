@@ -20,7 +20,7 @@ const ShopPage = () => {
           objectFit="cover"
           className="object-cover"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-10 bg-black/50">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black p-10">
           <h1 className="text-3xl md:text-5xl font-bold">Shop</h1>
           <p className="opacity-[0.8] max-w-xl text-lg md:text-xl mt-2 font-semibold">
             Home - Shop
