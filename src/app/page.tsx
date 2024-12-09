@@ -2,9 +2,11 @@ import Hero from "./Component/Hero";
 import TopSection from "./Component/TopSection";
 import Image from 'next/image';
 import { Calendar, Clock } from 'lucide-react';
+import NavBar from "./Component/Nav1";
 export default function Home() {
   return (
     <>
+      <NavBar/>
       <Hero />
       <section className="bg-[#FAF4F4] py-10">
         <div className="container mx-auto px-4 md:px-12">

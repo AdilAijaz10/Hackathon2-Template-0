@@ -4,47 +4,68 @@ import Image from 'next/image';
 const Cart = () => {
   return (
     <>
-    <div className="-100 p-4">
-  <div className="flex justify-between">
-    <div className="flex items-center">
-      <div className="bg-yellow p-2 w-20 h-20 mr-4">
-        <Image
-          src="/Asgaard sofa 1.png"
-          alt="Product Image"
-          className="w-full h-full object-contain"
-        />
+      <div className=" py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="md:w-3/4">
+              <div className="bg-white rounded-lg  p-6 mb-4">
+                <table className="w-full">
+                  <thead>
+                    <tr className='bg-[#FFF9E5] '>
+                      <th className="text-center py-4 text-left font-semibold">Product</th>
+                      <th className="py-4 text-left font-semibold">Price</th>
+                      <th className="py-4 text-left font-semibold">Quantity</th>
+                      <th className="py-4 text-left font-semibold">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="py-4">
+                        <div className="flex items-center">
+                        
+                          <Image
+                            src="/Asgaard sofa 1.png"
+                            width={100}
+                            height={100}
+                            alt="Product image"
+                            className="bg-[#FBEBB5] rounded-md h-16 w-16 mr-4"
+                          />
+                          <span className="text-gray-300">Asgaard sofa</span>
+                        </div>
+                      </td>
+                      <td className="py-4">Rs. 250,000.00</td>
+                      <td className="py-4">
+                        <div className="flex items-center">
+                          
+                          <button className="border rounded-md py-2 px-4 ml-2">1</button>
+                        </div>
+                      </td>
+                      <td className="py-4">Rs. 250,000.00</td>
+                    </tr>
+                    {/*More product rows */}  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="md:w-1/4 ">
+              <div className="bg-[#FFF9E5] p-6 text-center pb-16 mt-5">
+                <h2 className="text-lg font-semibold mb-4 text-center pb-8">Cart Total</h2>
+                <div className="flex justify-between mb-2">
+                  <span className='pb-2'>Subtotal</span>
+                  <span className='pb-2'>Rs. 250,000.00</span>
+                </div>
+                
+                  <div className="flex justify-between mb-2">
+                    <span className="font-semibold">Total</span>
+                    <span className="font-semibold">Rs. 250,000.00</span>
+                  </div>
+                  <button className="text-center text-black border-black border-2 py-2 px-4 rounded-lg mt-4 ">Checkout</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <p className="text-gray-700 font-medium">Asgaard sofa</p>
-        <p className="text-gray-500 text-sm">Rs. 250,000.00</p>
-      </div>
-      <div className="flex items-center">
-        <input type="number" className="border border-gray-300 px-2 py-1 w-10 text-center" value="1" />
-        <p className="ml-2 text-gray-500">Rs. 250,000.00</p>
-        <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium px-2 py-1 rounded ml-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div>
-      <h2 className="text-lg font-bold">Cart Totals</h2>
-      <div className="flex justify-between mt-4">
-        <p className="text-gray-700">Subtotal</p>
-        <p className="text-gray-700">Rs. 250,000.00</p>
-      </div>
-      <div className="flex justify-between mt-2">
-        <p className="text-gray-700 font-bold">Total</p>
-        <p className="text-gray-700 font-bold">Rs. 250,000.00</p>
-      </div>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-        Check Out
-      </button>
-    </div>
-  </div>
-</div>
-    <ShopSlider/>    
+      <ShopSlider />
     </>
   );
 }
